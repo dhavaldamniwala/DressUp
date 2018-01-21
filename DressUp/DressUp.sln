@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DressUp.ReferenceTypes", "D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DressUp.Interface", "DressUp.Interface\DressUp.Interface.csproj", "{5D611801-912B-468A-952F-4889D64112C5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DressUp.UnitTest", "DressUp.UnitTest\DressUp.UnitTest.csproj", "{88F239BA-240E-42D3-96CC-D1536F98D390}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5D611801-912B-468A-952F-4889D64112C5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5D611801-912B-468A-952F-4889D64112C5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5D611801-912B-468A-952F-4889D64112C5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{88F239BA-240E-42D3-96CC-D1536F98D390}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{88F239BA-240E-42D3-96CC-D1536F98D390}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{88F239BA-240E-42D3-96CC-D1536F98D390}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{88F239BA-240E-42D3-96CC-D1536F98D390}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

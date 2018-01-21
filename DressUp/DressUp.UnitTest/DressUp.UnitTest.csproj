@@ -4,17 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D54213C9-4007-4DBE-A769-C86946ED3600}</ProjectGuid>
-    <OutputType>Exe</OutputType>
+    <ProjectGuid>{88F239BA-240E-42D3-96CC-D1536F98D390}</ProjectGuid>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>DressUp</RootNamespace>
-    <AssemblyName>DressUp</AssemblyName>
+    <RootNamespace>DressUp.UnitTest</RootNamespace>
+    <AssemblyName>DressUp.UnitTest</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -24,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -33,6 +30,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.9.0.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.9.0\lib\net45\nunit.framework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -43,23 +44,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ColdTemperatureClothes.cs" />
-    <Compile Include="DressUpManager.cs" />
-    <Compile Include="HotTemperatureClothes.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="DressUpProcessCommandsTestCases.cs" />
+    <Compile Include="DressUpProcessCommandsShould.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\DressUp.Interface\DressUp.Interface.csproj">
-      <Project>{5D611801-912B-468A-952F-4889D64112C5}</Project>
-      <Name>DressUp.Interface</Name>
-    </ProjectReference>
     <ProjectReference Include="..\DressUp.ReferenceTypes\DressUp.ReferenceTypes.csproj">
       <Project>{97BC7B8E-9D9C-4D32-9AD4-3C8D22EAB6AD}</Project>
       <Name>DressUp.ReferenceTypes</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DressUp\DressUp.csproj">
+      <Project>{D54213C9-4007-4DBE-A769-C86946ED3600}</Project>
+      <Name>DressUp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
